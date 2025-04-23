@@ -123,11 +123,8 @@ article:has(video) {
   background: #eee;
 }
 
-/* nested selectors */
-form {
-  & button {
-    background: blue;
-  }
+form button {
+  background: blue;
 }
 
 h1 {
