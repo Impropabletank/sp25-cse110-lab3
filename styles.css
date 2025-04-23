@@ -1,4 +1,148 @@
-/* styles.css */
+:root {
+  --main-color: #3a5da8;
+  --fallback-color: red;
+}
+
+/* universal selector */
+* {
+  margin: 0;
+}
+
+/* element selector */
 body {
   background-color: #faff91;
+  font-family: Arial;
+}
+
+/* class selector */
+.pokemon-item {
+  color: rgb(200, 0, 0);
+}
+
+/* ID selector */
+#competitive-analysis {
+  border: 1px solid black;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  width: 100px;
+}
+
+/* pseudo-class selector */
+a:hover {
+  color: green;
+}
+
+/* Combinators */
+/* descendant */
+header h1 {
+  font-size: 2em;
+}
+
+/* child */
+article > p {
+  margin: 1rem 0;
+}
+
+/* adjacent sibling */
+h2 + p {
+  font-weight: bold;
+}
+
+/* general sibling */
+h3 ~ h2 {
+  text-decoration: underline;
+}
+
+/* combine two selectors */
+div.whoah {
+  background: hsl(200, 50%, 50%);
+}
+
+/* margin */
+header {
+  margin: 10px; /* shorthand */
+  margin-bottom: 15px; /* longhand */
+}
+
+article {
+  padding: 10px; /* shorthand */
+  padding-top: 5px; /* longhand */
+}
+
+footer {
+  border: 2px solid #000; /* shorthand */
+  border-radius: 5px;
+}
+
+/* Display Properties */
+nav {
+  display: inline-block;
+}
+
+details {
+  display: block;
+}
+
+img {
+  width: 300px;
+  max-width: 100%;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+/* flexbox */
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* grid */
+form > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+}
+
+article:has(video) {
+  background: #eee;
+}
+
+/* nested selectors */
+form {
+  & button {
+    background: blue;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+strong {
+  color: var(--main-color, var(--fallback-color));
+}
+
+/* Background */
+body {
+  background-image: linear-gradient(#faff91, white);
 }
